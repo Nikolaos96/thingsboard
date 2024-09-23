@@ -3584,8 +3584,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1124,
-        "layoutY" : 2076
+        "layoutX" : 1104,
+        "layoutY" : 2080
       },
       "configuration" : {
         "msgCount" : 0,
@@ -3736,7 +3736,7 @@
         "layoutY" : 2077
       },
       "configuration" : {
-        "restEndpointUrlPattern" : "https://api.smartdatasystem.es/v1/measurements?sensoruuid=df4b33bc-1d03-11ef-9c68-fa163ef3a36b?start=${msg.startTimestamp}&end=${msg.currentTimestamp}",
+        "restEndpointUrlPattern" : "https://api.smartdatasystem.es/v1/measurements?sensoruuid=49a37c97-5efb-11ef-9c68-fa163ef3a36b&begin=${msg.startTimestamp}&end=${msg.currentTimestamp}&sampling=0&value=4&timezone=Europe/Athens",
         "requestMethod" : "GET",
         "useSimpleClientHttpFactory" : false,
         "parseToPlainText" : false,
@@ -3751,7 +3751,7 @@
         "readTimeoutMs" : 0,
         "maxParallelRequestsCount" : 0,
         "headers" : {
-          "apiKey" : "b6e1a079fa8d2e96797a5e9adad02b2a32e126d93fc4ae62e2008de953031472.eyJpZCI6NDEsImlzcyI6ImRlbW8ifQ.MX-JRIF9J13m5dZsLfq1Jnop4BmDRHcC1PfUV_g55SE"
+          "apiKey" : "b6e1a079fa8d2e96797a5e9adad02b2a32e126d93fc4ae62e2008de953031472"
         },
         "useRedisQueueForMsgPersistence" : false,
         "trimQueue" : null,
