@@ -370,6 +370,10 @@
       "type" : "Success"
     }, {
       "fromIndex" : 111,
+      "toIndex" : 113,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 113,
       "toIndex" : 117,
       "type" : "Success"
     }, {
@@ -3635,13 +3639,13 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 1404,
-        "layoutY" : 1976
+        "layoutX" : 1381,
+        "layoutY" : 1972
       },
       "configuration" : {
-        "scriptLang" : "TBEL",
-        "jsScript" : "return {msg: msg, metadata: metadata, msgType: msgType};",
-        "tbelScript" : "msg = {\r\n    available : msg[\"23\"].available\r\n};\r\n\r\nreturn { msg: msg, metadata: metadata, msgType: msgType };"
+        "scriptLang" : "JS",
+        "jsScript" : "// Ensure the start and current timestamps are available in the message\nif (msg.startTimestamp && msg.currentTimestamp) {\n    // Construct the URL using the timestamps\n    var url = 'https://api.smartdatasystem.es/v1/measurements?sensoruuid=49a37c97-5efb-11ef-9c68-fa163ef3a36b&begin=' + msg.startTimestamp + '&end=' + msg.currentTimestamp + '&sampling=0&value=4&timezone=Europe/Athens'\n    \n    // Attach the constructed URL to the message\n    msg.fullUrl = url;\n    \n    // Return the modified message to be passed to the REST API Call Node\n    return { msg: msg.fullUrl };\n} else {\n    // If timestamps are missing, return an error message\n    return { msg: msg, error: \"Missing startTimestamp or currentTimestamp in msg\" };\n}\n\n\n\n\n\n\n\n\n\n\n",
+        "tbelScript" : ""
       },
       "configurationVersion" : 0,
       "createdTime" : 0,
@@ -3736,7 +3740,7 @@
         "layoutY" : 2077
       },
       "configuration" : {
-        "restEndpointUrlPattern" : "https://api.smartdatasystem.es/v1/measurements?sensoruuid=49a37c97-5efb-11ef-9c68-fa163ef3a36b&begin=${msg.startTimestamp}&end=${msg.currentTimestamp}&sampling=0&value=4&timezone=Europe/Athens",
+        "restEndpointUrlPattern" : "${msg.fullUrl}",
         "requestMethod" : "GET",
         "useSimpleClientHttpFactory" : false,
         "parseToPlainText" : false,
