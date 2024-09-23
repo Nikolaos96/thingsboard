@@ -3740,7 +3740,7 @@
         "layoutY" : 2077
       },
       "configuration" : {
-        "restEndpointUrlPattern" : "https://api.smartdatasystem.es/v1/measurements?sensoruuid=49a37c97-5efb-11ef-9c68-fa163ef3a36b&begin=${msg.startTimestamp}&end=${msg.currentTimestamp}&sampling=0&value=4&timezone=Europe/Athens",
+        "restEndpointUrlPattern" : "https://api.smartdatasystem.es/v1/measurements?sensoruuid=49a37c97-5efb-11ef-9c68-fa163ef3a36b&begin=$[startTimestamp]&end=$[currentTimestamp]&sampling=0&value=4&timezone=Europe/Athens",
         "requestMethod" : "GET",
         "useSimpleClientHttpFactory" : false,
         "parseToPlainText" : false,
