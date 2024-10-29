@@ -1,0 +1,39 @@
+{
+  "entityType" : "ENTITY_GROUP",
+  "entity" : {
+    "additionalInfo" : {
+      "description" : "EntityGroupsDemo_Dashboard is entity group for CustomerDemo1_OwnerTenant, All Users ticked and permissions write"
+    },
+    "configuration" : {
+      "columns" : [ {
+        "type" : "ENTITY_FIELD",
+        "key" : "created_time",
+        "sortOrder" : "DESC"
+      }, {
+        "type" : "ENTITY_FIELD",
+        "key" : "title",
+        "sortOrder" : "NONE"
+      } ],
+      "settings" : { },
+      "actions" : { }
+    },
+    "edgeGroupAll" : false,
+    "externalId" : null,
+    "groupAll" : false,
+    "id" : {
+      "entityType" : "ENTITY_GROUP",
+      "id" : "0ddc3970-95f4-11ef-9bb9-ab378911db0a"
+    },
+    "name" : "EntityGroupsDemo_Dashboard",
+    "ownerId" : {
+      "entityType" : "TENANT",
+      "id" : "4f4ec390-97ff-11ed-8b51-5d9544a9979e"
+    },
+    "type" : "DASHBOARD"
+  },
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  },
+  "groupEntities" : false
+}
