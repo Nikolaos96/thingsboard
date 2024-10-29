@@ -1,0 +1,27 @@
+{
+  "entityType" : "ROLE",
+  "entity" : {
+    "customerId" : {
+      "entityType" : "CUSTOMER",
+      "id" : "13814000-1dd2-11b2-8080-808080808080"
+    },
+    "externalId" : null,
+    "name" : "Spectator",
+    "permissions" : {
+      "ALL" : [ "READ", "READ_ATTRIBUTES", "READ_CREDENTIALS", "READ_TELEMETRY" ]
+    },
+    "type" : "GENERIC",
+    "additionalInfo" : {
+      "description" : "This Role as Spectator is for Read-Only purposes and has All Resources on Operations: Read, Read Attributes, Read Credentials, and Read Telemetry."
+    },
+    "id" : {
+      "entityType" : "ROLE",
+      "id" : "97ddcb10-95e1-11ef-9bb9-ab378911db0a"
+    },
+    "ownerId" : null
+  },
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  }
+}
